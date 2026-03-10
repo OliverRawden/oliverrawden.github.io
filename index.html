@@ -1,4 +1,111 @@
----
-layout: home
-# Index page
----
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name • Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hero -->
+  <header id="hero">
+    <div class="container">
+      <h1 class="greeting">Hey, I'm <span class="highlight">Your Name</span></h1>
+      <p class="tagline">Full-Stack Developer crafting clean, fast, and beautiful digital experiences.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">See My Work</a>
+        <a href="#contact" class="btn outline">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I build things that live on the internet. Currently focused on React, TypeScript, Node.js, and making interfaces feel intuitive and performant.</p>
+          <p>Previously @ Company X • Based in City • Coffee enthusiast • Always learning.</p>
+        </div>
+        <div class="skills">
+          <h3>Skills</h3>
+          <ul class="skill-tags">
+            <li>JavaScript (ES6+)</li>
+            <li>TypeScript</li>
+            <li>React / Next.js</li>
+            <li>Node.js & Express</li>
+            <li>Tailwind CSS</li>
+            <li>PostgreSQL</li>
+            <li>Git & GitHub</li>
+            <li>Python</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-img-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+          <div class="project-content">
+            <h3>E-Commerce Platform</h3>
+            <p>Full-stack online store with cart, Stripe payments, admin dashboard. Next.js + Prisma + Tailwind.</p>
+            <div class="project-links">
+              <a href="#" target="_blank">Live Demo</a>
+              <a href="#" target="_blank">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-img-placeholder" style="background: linear-gradient(135deg, #11998e, #38ef7d);"></div>
+          <div class="project-content">
+            <h3>Real-time Chat App</h3>
+            <p>Socket.io powered messaging app with rooms, typing indicators & dark mode. React + Firebase.</p>
+            <div class="project-links">
+              <a href="#" target="_blank">Live Demo</a>
+              <a href="#" target="_blank">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add 1–3 more cards as needed -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Let's Connect</h2>
+      <p>I'm currently open to new opportunities — freelance or full-time.</p>
+      <a href="mailto:hello@yourname.dev" class="btn primary large">Email Me → hello@yourname.dev</a>
+      
+      <div class="socials">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://twitter.com/yourhandle" target="_blank">X / Twitter</a>
+        <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name • Made with ♡ & lots of coffee</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
