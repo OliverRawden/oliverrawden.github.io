@@ -1,111 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name • Developer Portfolio</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>Oliver Rawden • Full-Stack Developer</title>
+  <link rel="stylesheet" href="style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Hero -->
-  <header id="hero">
+  <header class="hero">
     <div class="container">
-      <h1 class="greeting">Hey, I'm <span class="highlight">Your Name</span></h1>
+      <h1>Hey, I'm <span class="accent">Oliver Rawden</span></h1>
       <p class="tagline">Full-Stack Developer crafting clean, fast, and beautiful digital experiences.</p>
-      <div class="hero-buttons">
+      <div class="hero-cta">
         <a href="#projects" class="btn primary">See My Work</a>
-        <a href="#contact" class="btn outline">Get in Touch</a>
+        <a href="#contact" class="btn secondary">Get in Touch</a>
       </div>
     </div>
   </header>
 
-  <!-- About -->
-  <section id="about">
+  <section id="about" class="section">
     <div class="container">
-      <h2>About Me</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I build things that live on the internet. Currently focused on React, TypeScript, Node.js, and making interfaces feel intuitive and performant.</p>
-          <p>Previously @ Company X • Based in City • Coffee enthusiast • Always learning.</p>
-        </div>
-        <div class="skills">
-          <h3>Skills</h3>
-          <ul class="skill-tags">
-            <li>JavaScript (ES6+)</li>
-            <li>TypeScript</li>
-            <li>React / Next.js</li>
-            <li>Node.js & Express</li>
-            <li>Tailwind CSS</li>
-            <li>PostgreSQL</li>
-            <li>Git & GitHub</li>
-            <li>Python</li>
-          </ul>
-        </div>
+      <h2 class="section-title">About Me</h2>
+      <p>I build things that live on the internet. Currently focused on React, TypeScript, Node.js, and making interfaces feel intuitive and performant.</p>
+      <p>Previously @ Company X • Based in [Your City] • Coffee enthusiast • Always learning.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <span class="skill-pill">JavaScript (ES6+)</span>
+        <span class="skill-pill">TypeScript</span>
+        <span class="skill-pill">React / Next.js</span>
+        <span class="skill-pill">Node.js & Express</span>
+        <span class="skill-pill">Tailwind CSS</span>
+        <span class="skill-pill">PostgreSQL</span>
+        <span class="skill-pill">Git & GitHub</span>
+        <span class="skill-pill">Python</span>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects">
+  <section id="projects" class="section">
     <div class="container">
-      <h2>Selected Projects</h2>
+      <h2 class="section-title">Selected Projects</h2>
       <div class="projects-grid">
-        
-        <!-- Project 1 -->
         <div class="project-card">
-          <div class="project-img-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
-          <div class="project-content">
+          <div class="project-header">
             <h3>E-Commerce Platform</h3>
-            <p>Full-stack online store with cart, Stripe payments, admin dashboard. Next.js + Prisma + Tailwind.</p>
-            <div class="project-links">
-              <a href="#" target="_blank">Live Demo</a>
-              <a href="#" target="_blank">Source Code</a>
-            </div>
+          </div>
+          <p>Full-stack online store with cart, Stripe payments, admin dashboard. Next.js + Prisma + Tailwind.</p>
+          <div class="project-links">
+            <a href="#" target="_blank" class="link">Live Demo →</a>
+            <a href="#" target="_blank" class="link">Source Code →</a>
           </div>
         </div>
 
-        <!-- Project 2 -->
         <div class="project-card">
-          <div class="project-img-placeholder" style="background: linear-gradient(135deg, #11998e, #38ef7d);"></div>
-          <div class="project-content">
+          <div class="project-header">
             <h3>Real-time Chat App</h3>
-            <p>Socket.io powered messaging app with rooms, typing indicators & dark mode. React + Firebase.</p>
-            <div class="project-links">
-              <a href="#" target="_blank">Live Demo</a>
-              <a href="#" target="_blank">Source Code</a>
-            </div>
+          </div>
+          <p>Socket.io powered messaging app with rooms, typing indicators & dark mode. React + Firebase.</p>
+          <div class="project-links">
+            <a href="#" target="_blank" class="link">Live Demo →</a>
+            <a href="#" target="_blank" class="link">Source Code →</a>
           </div>
         </div>
 
-        <!-- Add 1–3 more cards as needed -->
-
+        <!-- Add more cards here as needed -->
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="section contact">
     <div class="container">
-      <h2>Let's Connect</h2>
+      <h2 class="section-title">Let's Connect</h2>
       <p>I'm currently open to new opportunities — freelance or full-time.</p>
       <a href="mailto:hello@yourname.dev" class="btn primary large">Email Me → hello@yourname.dev</a>
-      
-      <div class="socials">
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        <a href="https://twitter.com/yourhandle" target="_blank">X / Twitter</a>
-        <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a>
+      <div class="social-links">
+        <a href="https://github.com/oliverrawden" target="_blank">GitHub</a>
+        <a href="https://x.com/yourhandle" target="_blank">X / Twitter</a>
+        <a href="https://linkedin.com/in/oliverrawden" target="_blank">LinkedIn</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Your Name • Made with ♡ & lots of coffee</p>
+    <p>© 2026 Oliver Rawden • Made with ☕ & code</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
