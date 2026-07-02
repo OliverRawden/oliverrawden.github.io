@@ -3,313 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oliver Rawden • Developer Across Apple, Java, and Unix</title>
-  <meta
-    name="description"
-    content="Oliver Rawden builds polished Apple experiences, Java software, and practical Unix-first tooling."
-  />
-  <link rel="stylesheet" href="style.css" />
+  <title>Oliver Rawden — Ara &amp; Vex</title>
+  <meta name="description" content="Oliver Rawden builds Ara (on-device AI) and Vex (protocol orchestration) — private desktop software for macOS, Windows, and Linux." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
-  <div class="page-shell">
-    <header class="site-header">
-      <div class="container topbar">
-        <a href="#home" class="brand">OR</a>
-        <nav class="topnav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#focus">Focus</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">OR</span>
+        <span>Oliver Rawden</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="ara.html">Ara</a>
+        <a href="vex.html">Vex</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <main id="home">
-      <section class="hero">
-        <div class="container hero-layout">
-          <div class="hero-copy surface soft-glass">
-            <p class="eyebrow">Full-stack developer with an Apple and Unix tilt</p>
-            <h1>
-              Building thoughtful software for
-              <span class="accent">desktop, mobile, and the command line.</span>
-            </h1>
-            <p class="tagline">
-              I design and ship across Java, Xcode, Mac &amp; iOS, and Linux &amp; Unix,
-              with a bias for responsive interfaces, clean tooling, and fast iteration.
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Desktop software · Java · JavaFX</p>
+          <h1>Private AI and protocol tooling, <span class="gradient">built for your machine.</span></h1>
+          <p class="lead">
+            I build <strong>Ara</strong> — a fully on-device AI assistant — and <strong>Vex</strong>, its protocol
+            orchestration console. No cloud inference. Your data stays under <code>~/Documents/</code>.
+          </p>
+          <div class="hero-actions">
+            <a href="ara.html" class="btn btn-primary">Explore Ara</a>
+            <a href="vex.html" class="btn btn-secondary">Explore Vex</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="ecosystem">
+            <div class="eco-node vex">
+              <h3>Vex</h3>
+              <p>Define protocols, pipe commands, edit ara-tool schemas</p>
+            </div>
+            <div class="eco-arrow">~/Documents/Vex/Protocols/*.md</div>
+            <div class="eco-node ara">
+              <h3>Ara</h3>
+              <p>Chat, infer locally, call tools — reads Vex at runtime</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Projects</p>
+          <h2>Two apps, one ecosystem</h2>
+          <p>Vex is the control plane. Ara is the intelligence layer. Both are cross-platform JavaFX applications with native packaging.</p>
+        </div>
+        <div class="card-grid two">
+          <a href="ara.html" class="project-card featured">
+            <span class="project-badge ara">Ara · v5.5</span>
+            <h3>On-device AI assistant</h3>
+            <p>
+              Desktop chat with GGUF model inference via java-llama.cpp. Streaming responses, encrypted storage,
+              agent tools (terminal, web search, persistent memory), and Vex protocol sync.
             </p>
-            <div class="hero-cta">
-              <a href="#focus" class="btn primary">Explore My Stack</a>
-              <a href="#projects" class="btn secondary">See Project Space</a>
+            <div class="tag-row">
+              <span class="tag">JavaFX</span>
+              <span class="tag">llama.cpp</span>
+              <span class="tag">AES-256-GCM</span>
+              <span class="tag">macOS · Win · Linux</span>
             </div>
-          </div>
-
-          <aside class="hero-aside">
-            <div class="surface info-card">
-              <p class="card-label">Current Mode</p>
-              <h2>Shipping across platforms without losing the details.</h2>
-              <ul class="mini-list">
-                <li>SwiftUI and Xcode for polished Apple-native experiences</li>
-                <li>Java for robust apps and backend-friendly foundations</li>
-                <li>Unix-first workflows for automation, tooling, and systems work</li>
-              </ul>
+          </a>
+          <a href="vex.html" class="project-card featured">
+            <span class="project-badge vex">Vex · v0.2</span>
+            <h3>Protocol orchestration console</h3>
+            <p>
+              Markdown-native protocols and functions. Run pipelines like <code>2 | 9</code> in a built-in console.
+              Built-in ara-tool protocols (101–106) sync directly to Ara's agent loop.
+            </p>
+            <div class="tag-row">
+              <span class="tag">JavaFX</span>
+              <span class="tag">Console</span>
+              <span class="tag">Protocols</span>
+              <span class="tag">Ara integration</span>
             </div>
-
-            <div class="metric-grid">
-              <div class="surface metric-card">
-                <span class="metric-value">4</span>
-                <span class="metric-label">Core focus lanes</span>
-              </div>
-              <div class="surface metric-card">
-                <span class="metric-value">1</span>
-                <span class="metric-label">Unified design language</span>
-              </div>
-            </div>
-          </aside>
+          </a>
         </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">About</p>
-            <h2>Rounded, practical, and built to feel at home on every screen.</h2>
-          </div>
-
-          <div class="about-grid">
-            <div class="surface about-card">
-              <p>
-                I build apps for Mac and iPhone, create software in Java, and spend plenty
-                of time in Linux and Unix environments shaping tools, workflows, and small
-                quality-of-life utilities.
-              </p>
-              <p>
-                My sweet spot is blending product feel with engineering discipline: interfaces
-                that look intentional, code that stays maintainable, and systems that behave
-                well on both laptops and phones.
-              </p>
-            </div>
-
-            <div class="surface trait-card">
-              <p class="card-label">Working Style</p>
-              <div class="pill-row">
-                <span class="skill-pill">Intuitive</span>
-                <span class="skill-pill">Fast learner</span>
-                <span class="skill-pill">Coffee powered</span>
-                <span class="skill-pill">Unix minded</span>
-                <span class="skill-pill">UI focused</span>
-                <span class="skill-pill">Always learning</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="focus" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Focus Areas</p>
-            <h2>Separate lanes for the platforms and tools I spend time in.</h2>
-          </div>
-
-          <div class="focus-shell surface soft-glass">
-            <div class="tablist" role="tablist" aria-label="Technology focus areas">
-              <button class="tab-button is-active" id="tab-java" role="tab" aria-selected="true" aria-controls="panel-java" data-tab="java">Java</button>
-              <button class="tab-button" id="tab-xcode" role="tab" aria-selected="false" aria-controls="panel-xcode" data-tab="xcode">Xcode</button>
-              <button class="tab-button" id="tab-apple" role="tab" aria-selected="false" aria-controls="panel-apple" data-tab="apple">Mac &amp; iOS</button>
-              <button class="tab-button" id="tab-unix" role="tab" aria-selected="false" aria-controls="panel-unix" data-tab="unix">Linux &amp; Unix</button>
-            </div>
-
-            <div class="tab-panels">
-              <section class="tab-panel is-active" id="panel-java" role="tabpanel" aria-labelledby="tab-java">
-                <div class="focus-panel-grid">
-                  <div>
-                    <p class="panel-kicker">Java</p>
-                    <h3>Structured software with room to scale.</h3>
-                    <p>
-                      From desktop utilities to service-friendly architecture, I enjoy Java when
-                      a project needs strong organization, clear abstractions, and long-term sanity.
-                    </p>
-                  </div>
-                  <div class="feature-grid">
-                    <article class="feature-card">
-                      <h4>Code Style</h4>
-                      <p>Readable classes, sensible packages, and the kind of structure that makes later changes cheaper.</p>
-                    </article>
-                    <article class="feature-card">
-                      <h4>Tooling</h4>
-                      <p>Comfortable inside IntelliJ-based workflows, version control, and practical debugging loops.</p>
-                    </article>
-                    <article class="feature-card">
-                      <h4>Use Cases</h4>
-                      <p>Apps, utilities, backend-friendly foundations, and experiments that benefit from mature tooling.</p>
-                    </article>
-                  </div>
-                </div>
-              </section>
-
-              <section class="tab-panel" id="panel-xcode" role="tabpanel" aria-labelledby="tab-xcode" hidden>
-                <div class="focus-panel-grid">
-                  <div>
-                    <p class="panel-kicker">Xcode</p>
-                    <h3>Apple platform development with a product mindset.</h3>
-                    <p>
-                      I use Xcode as the main workbench for turning ideas into native experiences,
-                      with attention to navigation flow, visual polish, and smooth iteration.
-                    </p>
-                  </div>
-                  <div class="feature-grid">
-                    <article class="feature-card">
-                      <h4>Native UX</h4>
-                      <p>Layouts that feel at home on Apple devices instead of looking like generic ports.</p>
-                    </article>
-                    <article class="feature-card">
-                      <h4>Iteration</h4>
-                      <p>Preview-driven adjustments, practical testing, and shipping details that hold up under daily use.</p>
-                    </article>
-                    <article class="feature-card">
-                      <h4>Workflow</h4>
-                      <p>Comfortable across project setup, asset handling, debugging, and refining the final finish.</p>
-                    </article>
-                  </div>
-                </div>
-              </section>
-
-              <section class="tab-panel" id="panel-apple" role="tabpanel" aria-labelledby="tab-apple" hidden>
-                <div class="focus-panel-grid">
-                  <div>
-                    <p class="panel-kicker">Mac &amp; iOS</p>
-                    <h3>Interfaces tuned for handheld and desktop use.</h3>
-                    <p>
-                      I like software that adapts gracefully: spacious and efficient on large screens,
-                      calm and touch-friendly on smaller ones, without feeling like two separate products.
-                    </p>
-                  </div>
-                  <div class="feature-grid">
-                    <article class="feature-card">
-                      <h4>Responsiveness</h4>
-                      <p>Design systems that translate across devices while keeping hierarchy, clarity, and rhythm.</p>
-                    </article>
-                    <article class="feature-card">
-                      <h4>Platform Fit</h4>
-                      <p>Respect for native conventions, system behavior, and the subtle details users notice.</p>
-                    </article>
-                    <article class="feature-card">
-                      <h4>Visual Quality</h4>
-                      <p>Soft geometry, careful spacing, and restrained effects instead of clutter or over-animation.</p>
-                    </article>
-                  </div>
-                </div>
-              </section>
-
-              <section class="tab-panel" id="panel-unix" role="tabpanel" aria-labelledby="tab-unix" hidden>
-                <div class="focus-panel-grid">
-                  <div>
-                    <p class="panel-kicker">Linux &amp; Unix</p>
-                    <h3>Automation, shell fluency, and systems curiosity.</h3>
-                    <p>
-                      I enjoy the command line for the leverage it gives: scripting away repetition,
-                      understanding the machine better, and building workflows that stay fast and dependable.
-                    </p>
-                  </div>
-                  <div class="feature-grid">
-                    <article class="feature-card">
-                      <h4>Shell Work</h4>
-                      <p>Bash, Zsh, and practical terminal tooling for everyday automation and maintenance.</p>
-                    </article>
-                    <article class="feature-card">
-                      <h4>Environment Design</h4>
-                      <p>Dotfiles, scripts, and setup choices that make development smoother and less fragile.</p>
-                    </article>
-                    <article class="feature-card">
-                      <h4>Systems Thinking</h4>
-                      <p>An interest in how software behaves underneath the UI, from processes to permissions and pipelines.</p>
-                    </article>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Project Space</p>
-            <h2>A layout ready for real work, experiments, and platform-specific builds.</h2>
-          </div>
-
-          <div class="projects-grid">
-            <article class="surface project-card project-card-featured">
-              <p class="card-label">Featured Slot</p>
-              <h3>Your flagship build goes here.</h3>
-              <p>
-                This wider card is designed for the project you want to lead with, whether that is
-                a Mac utility, iOS app, Java platform, or a systems-heavy tool.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">Apple</span>
-                <span class="project-tag">Java</span>
-                <span class="project-tag">Unix</span>
-              </div>
-            </article>
-
-            <article class="surface project-card">
-              <p class="card-label">Project Card</p>
-              <h3>Mac utility or SwiftUI app</h3>
-              <p>Use this area for a focused summary, a sharp screenshot, or a link-out to source and demos.</p>
-            </article>
-
-            <article class="surface project-card">
-              <p class="card-label">Project Card</p>
-              <h3>Java build or backend tool</h3>
-              <p>Ideal for desktop software, structured app work, or practical infrastructure experiments.</p>
-            </article>
-
-            <article class="surface project-card">
-              <p class="card-label">Project Card</p>
-              <h3>Linux or shell-driven tooling</h3>
-              <p>A good spot for automation work, terminal-first utilities, or low-level workflow improvements.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container">
-          <div class="contact-banner surface soft-glass">
-            <div>
-              <p class="eyebrow">Contact</p>
-              <h2>Open to thoughtful projects, freelance work, and platform-heavy builds.</h2>
-              <p>
-                If you want someone comfortable moving between Apple development, Java, and Unix-flavored tooling,
-                let’s talk.
-              </p>
-            </div>
-
-            <div class="contact-actions">
-              <a href="https://github.com/oliverrawden" target="_blank" rel="noreferrer" class="btn primary">GitHub</a>
-              <a href="https://linkedin.com/in/oliverrawden" target="_blank" rel="noreferrer" class="btn secondary">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <p>© 2026 Oliver Rawden</p>
-        <p>Gruvbox-inspired palette • rounded surfaces • responsive layout</p>
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <script src="script.js"></script>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Why local-first</p>
+          <h2>Software that respects your machine</h2>
+        </div>
+        <div class="card-grid three">
+          <div class="feature-item">
+            <div class="feature-icon">🔒</div>
+            <div>
+              <h4>Private by default</h4>
+              <p>Models, chats, and memory live on disk — optional passphrase encryption for sensitive data.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⚡</div>
+            <div>
+              <h4>Fast &amp; responsive</h4>
+              <p>Staged startup, background model preload, and virtual threads keep the UI snappy.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🔧</div>
+            <div>
+              <h4>Extensible tools</h4>
+              <p>Edit agent tool definitions in Vex — Ara picks up changes when protocol files change.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Stack</p>
+          <h2>Built with mature, cross-platform tooling</h2>
+        </div>
+        <div class="tag-row" style="gap: 0.6rem;">
+          <span class="tag">Java 21–25</span>
+          <span class="tag">JavaFX 27</span>
+          <span class="tag">Gradle</span>
+          <span class="tag">AtlantaFX / Cupertino</span>
+          <span class="tag">Jackson</span>
+          <span class="tag">jpackage</span>
+          <span class="tag">Swift / Xcode</span>
+          <span class="tag">Unix &amp; shell</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Oliver Rawden</p>
+      <div class="footer-links">
+        <a href="mailto:contact-rawden@pm.me">contact-rawden@pm.me</a>
+        <a href="https://github.com/OliverRawden" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/oliverrawden" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
 </body>
 </html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ara — On-Device AI Assistant · Oliver Rawden</title>
+  <meta name="description" content="Ara is a desktop JavaFX chat app that runs GGUF models fully on-device with agent tools, encryption, and Vex protocol integration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">OR</span>
+        <span>Oliver Rawden</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="ara.html">Ara</a>
+        <a href="vex.html">Vex</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero ara-theme">
+      <div class="container">
+        <p class="eyebrow">Ara · v5.5</p>
+        <h1>On-device AI assistant</h1>
+        <p class="lead">
+          A desktop chat application that runs large language models entirely on your machine — no cloud inference,
+          no API keys. Built with JavaFX and java-llama.cpp.
+        </p>
+        <div class="hero-actions">
+          <a href="https://github.com/OliverRawden/Ara" class="btn btn-primary" target="_blank" rel="noreferrer">GitHub (private)</a>
+          <a href="vex.html" class="btn btn-secondary">Companion: Vex</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="content-block">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Streaming chat with Cupertino dark/light themes</li>
+            <li>Background GGUF model preload for fast first replies</li>
+            <li>Agent tools via Vex protocols (terminal, web, memory)</li>
+            <li>Optional AES-256-GCM encryption for chats &amp; memory</li>
+            <li>Audit log for tool calls and privacy events</li>
+            <li>Native installers via jpackage (macOS, Windows, Linux)</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h3>Requirements</h3>
+          <p>JDK 21+ (Java 25 recommended). Gradle wrapper included.</p>
+          <div class="code-block mt-2">
+            <span class="comment"># Run from source</span><br />
+            git clone https://github.com/OliverRawden/Ara.git<br />
+            cd Ara<br />
+            ./gradlew :app:run
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Agent tools (Vex sync)</h2>
+          <p>Tools are defined as Vex protocols and auto-loaded into every system prompt.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tool</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>101</td><td><code>execute_command</code></td><td>Shell commands with confirmation UI</td></tr>
+              <tr><td>102</td><td><code>get_current_datetime</code></td><td>Current date and time</td></tr>
+              <tr><td>103</td><td><code>web_search</code></td><td>DuckDuckGo Lite search</td></tr>
+              <tr><td>104</td><td><code>read_memory</code></td><td>Read persistent context.md</td></tr>
+              <tr><td>105</td><td><code>write_memory</code></td><td>Replace persistent memory</td></tr>
+              <tr><td>106</td><td><code>append_memory</code></td><td>Structured memory append</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Data layout</h2>
+          <p>All runtime data under <code>~/Documents/Ara/</code></p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Path</th><th>Contents</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>models/</code></td><td>GGUF model files</td></tr>
+              <tr><td><code>data/chats.json</code></td><td>Chat sessions</td></tr>
+              <tr><td><code>data/settings.json</code></td><td>App preferences</td></tr>
+              <tr><td><code>context.md</code></td><td>Long-term AI memory</td></tr>
+              <tr><td><code>logs/audit.log</code></td><td>Tool &amp; privacy audit trail</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="content-block">
+          <h3>Recommended model</h3>
+          <p>
+            <strong>Qwen2.5-7B-Instruct Q4_K_M</strong> (~4.5 GB) — downloadable from Settings → Model,
+            or place any <code>.gguf</code> in the models directory.
+          </p>
+        </div>
+        <div class="content-block">
+          <h3>Architecture</h3>
+          <div class="code-block">
+            tech.rawden.ara/<br />
+            ├── ai/           <span class="comment"># LlamaCpp, ModelPreloader</span><br />
+            ├── ui/           <span class="comment"># Chat, sidebar, settings</span><br />
+            ├── tool/         <span class="comment"># Terminal, web search</span><br />
+            ├── integration/  <span class="comment"># Vex protocol loader</span><br />
+            └── core/         <span class="comment"># Theme, encryption, paths</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Oliver Rawden · Ara is proprietary software</p>
+      <div class="footer-links">
+        <a href="mailto:contact-rawden@pm.me">contact-rawden@pm.me</a>
+        <a href="vex.html">Vex</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>
