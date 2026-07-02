@@ -31,15 +31,8 @@ jobs:
       - name: Upload static site
         uses: actions/upload-pages-artifact@v5
         with:
-          path: |
-            index.html
-            ara.html
-            vex.html
-            about.html
-            contact.html
-            css
-            js
-            .nojekyll
+          path: .
+          include-hidden-files: true
 
       - name: Deploy to GitHub Pages
         id: deployment
