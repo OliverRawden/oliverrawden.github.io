@@ -31,16 +31,54 @@
   <main>
     <section class="page-hero ara-theme">
       <div class="container">
-        <p class="eyebrow">Ara · v5.5</p>
+        <p class="eyebrow" data-ara-version>Ara · v5.7</p>
         <h1>On-device AI assistant</h1>
         <p class="lead">
           A desktop chat application that runs large language models entirely on your machine — no cloud inference,
           no API keys. Built with JavaFX and java-llama.cpp.
         </p>
         <div class="hero-actions">
-          <a href="https://github.com/OliverRawden/Ara" class="btn btn-primary" target="_blank" rel="noreferrer">GitHub (private)</a>
-          <a href="vex.html" class="btn btn-secondary">Companion: Vex</a>
+          <a href="#download" class="btn btn-primary">Download latest</a>
+          <a href="https://github.com/OliverRawden/Ara" class="btn btn-secondary" target="_blank" rel="noreferrer">View on GitHub</a>
+          <a href="vex.html" class="btn btn-ghost">Companion: Vex</a>
         </div>
+      </div>
+    </section>
+
+    <section id="download" class="section download-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Download</p>
+          <h2>Get the latest release</h2>
+          <p data-ara-release-notes>
+            Ara v5.7: faster inference, Ara-hosted model download, smarter tool use, optional auto-updates.
+          </p>
+          <p class="text-muted download-meta" data-ara-release-date>Released 2026-07-03</p>
+        </div>
+        <p class="download-status" data-ara-download-status aria-live="polite">Loading downloads…</p>
+        <div class="download-grid" data-ara-downloads>
+          <a href="https://github.com/OliverRawden/Ara/releases/download/v5.7/ara-installer-macos-arm64.pkg" class="download-card" target="_blank" rel="noreferrer">
+            <div class="download-card-head">
+              <span class="download-platform">macOS Installer</span>
+              <span class="download-badge">Recommended</span>
+            </div>
+            <p class="download-detail">Apple Silicon · PKG</p>
+            <p class="download-filename">ara-installer-macos-arm64.pkg</p>
+            <span class="download-cta">Download</span>
+          </a>
+          <a href="https://github.com/OliverRawden/Ara/releases/download/v5.7/ara-portable-macos-arm64.dmg" class="download-card" target="_blank" rel="noreferrer">
+            <div class="download-card-head">
+              <span class="download-platform">macOS Portable</span>
+            </div>
+            <p class="download-detail">Apple Silicon · DMG</p>
+            <p class="download-filename">ara-portable-macos-arm64.dmg</p>
+            <span class="download-cta">Download</span>
+          </a>
+        </div>
+        <p class="download-footnote">
+          <a href="https://github.com/OliverRawden/Ara/releases/latest" target="_blank" rel="noreferrer">All releases on GitHub</a>
+          · Windows and Linux builds available from source
+        </p>
       </div>
     </section>
 
@@ -50,10 +88,11 @@
           <h3>Highlights</h3>
           <ul>
             <li>Streaming chat with Cupertino dark/light themes</li>
-            <li>Background GGUF model preload for fast first replies</li>
+            <li>Background model preload and KV-cache warmup for fast first replies</li>
             <li>Agent tools via Vex protocols (terminal, web, memory)</li>
+            <li>Ara-hosted default model download (no third-party registry)</li>
             <li>Optional AES-256-GCM encryption for chats &amp; memory</li>
-            <li>Audit log for tool calls and privacy events</li>
+            <li>Optional in-app updates via GitHub releases (off by default)</li>
             <li>Native installers via jpackage (macOS, Windows, Linux)</li>
           </ul>
         </div>
@@ -156,5 +195,6 @@
     </div>
   </footer>
   <script src="js/site.js"></script>
+  <script src="js/ara-downloads.js"></script>
 </body>
 </html>
