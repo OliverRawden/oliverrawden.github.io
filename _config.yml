@@ -1,0 +1,25 @@
+title: Oliver Rawden
+description: Personal website
+url: "https://oliverrawden.github.io"
+baseurl: ""
+
+author:
+  name: Oliver Rawden
+  email: contact-rawden@pm.me
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .gitignore
+  - .github
