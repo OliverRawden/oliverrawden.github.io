@@ -1,25 +1,170 @@
-title: Oliver Rawden
-description: Java developer portfolio
-url: "https://oliverrawden.github.io"
-baseurl: ""
+# The Site Configuration
 
-author:
+theme: jekyll-theme-chirpy
+
+lang: en
+timezone: Europe/London
+
+title: Oliver Rawden
+tagline: Java developer
+
+description: >-
+  Java developer portfolio — selected work, notes, and projects by Oliver Rawden.
+
+url: "https://oliverrawden.github.io"
+
+github:
+  username: OliverRawden
+
+twitter:
+  username:
+
+social:
   name: Oliver Rawden
   email: contact-rawden@pm.me
+  links:
+    - https://github.com/OliverRawden
 
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+analytics:
+  google:
+    id:
+  goatcounter:
+    id:
+  umami:
+    id:
+    domain:
+  matomo:
+    id:
+    domain:
+  cloudflare:
+    id:
+  fathom:
+    id:
+
+pageviews:
+  provider:
+
+theme_mode:
+
+cdn:
+
+avatar:
+
+social_preview_image:
+
+toc: true
+
+actions:
+  edit_post:
+    enabled: false
+    url: ""
+    static_url: false
+
+comments:
+  provider:
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
+    mapping:
+    strict:
+    input_position:
+    lang:
+    reactions_enabled:
+
+assets:
+  self_host:
+    enabled:
+    env:
+
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+    deny_paths:
+
+paginate: 10
+
+baseurl: ""
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
 
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
   - README.md
-  - .gitignore
-  - .github
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
