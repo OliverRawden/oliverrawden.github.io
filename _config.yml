@@ -1,5 +1,5 @@
 title: Oliver Rawden
-description: Personal website
+description: Indie developer building private on-device AI systems, cross-platform tools, and thoughtful software.
 url: "https://oliverrawden.github.io"
 baseurl: ""
 
@@ -14,6 +14,12 @@ permalink: pretty
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+social:
+  name: Oliver Rawden
+  links:
+    - https://github.com/OliverRawden
+    - mailto:contact-rawden@pm.me
 
 exclude:
   - Gemfile
