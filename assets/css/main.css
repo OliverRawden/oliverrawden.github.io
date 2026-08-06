@@ -7,6 +7,7 @@
   --border: #e8e8e8;
   --link: #1a1a1a;
   --link-hover: #555;
+  --accent: #0f766e; /* teal for subtle emphasis */
   --max-width: 40rem;
   --space: 1.5rem;
   --radius: 0.5rem;
@@ -21,6 +22,7 @@
     --border: #2a2a2a;
     --link: #f0f0f0;
     --link-hover: #b0b0b0;
+    --accent: #2dd4bf;
   }
 }
 
@@ -121,6 +123,13 @@ body {
   margin: 2rem 0 0.75rem;
 }
 
+.content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 1.75rem 0 0.5rem;
+}
+
 .content p {
   margin: 0 0 1.1rem;
   color: var(--fg);
@@ -171,6 +180,20 @@ body {
   margin: 0;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.footer-links {
+  margin-top: 0.4rem !important;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+  color: var(--fg);
 }
 
 /* Focus */
