@@ -1,27 +1,42 @@
 # oliverrawden.github.io
 
-Personal site for Oliver Rawden — a formal, minimal Java developer portfolio.
-Built with [Jekyll](https://jekyllrb.com), hosted on GitHub Pages.
+Personal site for **Oliver Rawden** — a formal Java developer portfolio.
+
+Built with [Jekyll](https://jekyllrb.com) and
+[Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy), hosted on GitHub Pages.
 
 ## Local development
 
-macOS ships with an old system Ruby (2.6) that cannot install modern gems.
-Use Homebrew Ruby:
+macOS system Ruby is too old. Use Homebrew Ruby (3.4+ recommended):
 
 ```bash
-brew install ruby
-
-# put Homebrew Ruby first on PATH for this shell
-export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"
+brew install ruby@3.4
+export PATH="/opt/homebrew/opt/ruby@3.4/bin:$PATH"
 
 bundle install
 bundle exec jekyll serve
 ```
 
-Open [http://localhost:4000](http://localhost:4000).
+Chirpy requires Ruby **3.1–3.4** (not system Ruby 2.6, and not Ruby 4.x).
+
+Open [http://127.0.0.1:4000](http://127.0.0.1:4000).
+
+Or use the helper script:
+
+```bash
+bash tools/run.sh
+```
+
+## Content
+
+| Path | Purpose |
+|------|---------|
+| `_posts/` | Blog / update posts (shown on home) |
+| `_tabs/about.md` | About page (sidebar) |
+| `_tabs/projects.md` | Projects page (sidebar) |
+| `_config.yml` | Site title, URL, social links |
 
 ## Deploy
 
-Pushes to `main` build and deploy automatically via GitHub Actions
-(`.github/workflows/pages.yml`). You can also re-run the workflow from the
-Actions tab with **Run workflow**.
+Pushes to `main` build and deploy via `.github/workflows/pages-deploy.yml`.
+Ensure **Settings → Pages → Source** is set to **GitHub Actions**.
