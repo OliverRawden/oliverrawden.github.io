@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <title>{% if page.title and page.title != "Home" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% seo %}
 </head>
@@ -16,7 +14,7 @@
       <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <nav class="site-nav" aria-label="Primary">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-        <a href="{{ '/projects/' | relative_url }}"{% if page.url == '/projects/' %} aria-current="page"{% endif %}>Projects</a>
+        <a href="{{ '/#projects' | relative_url }}"{% if page.url == '/' %} class="nav-projects"{% endif %}>Projects</a>
         <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
       </nav>
     </header>
@@ -26,11 +24,10 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.author.name }}</p>
-      <p class="footer-links">
-        <a href="https://github.com/OliverRawden">GitHub</a>
-        ·
-        <a href="mailto:{{ site.author.email }}">Email</a>
+      <p>
+        &copy; {{ 'now' | date: '%Y' }} {{ site.author.name }}
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
       </p>
     </footer>
   </div>
