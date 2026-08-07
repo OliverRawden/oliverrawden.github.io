@@ -123,8 +123,8 @@ defaults:
       type: posts
     values:
       layout: post
-      comments: true
-      toc: true
+      comments: false
+      toc: false
       permalink: /posts/:title/
   - scope:
       path: _drafts
@@ -160,11 +160,6 @@ exclude:
   - "*.config.js"
   - "package*.json"
 
+# Portfolio site — no blog archives/tags/categories UI
 jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+  enabled: []
