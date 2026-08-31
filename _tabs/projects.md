@@ -3,26 +3,35 @@ icon: fas fa-code
 order: 5
 ---
 
-Selected work and work in progress. Replace placeholders with real project
-names, descriptions, and links when ready.
+Selected work and work in progress.
 
-## Project One
+## This website
 
-**Stack:** Java
+**Stack:** Jekyll · GitHub Pages
 
-Short description of the project — problem solved, technologies used, and
-outcome. Suitable for a production or open-source application.
+This site — a concise Java developer portfolio built with Jekyll and the
+[Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme, hosted on
+GitHub Pages.
 
-## Project Two
+Source: [github.com/OliverRawden/oliverrawden.github.io](https://github.com/OliverRawden/oliverrawden.github.io)
 
-**Stack:** Java · Spring
+## Ara
 
-Another project summary. Suitable for services, libraries, tooling, or
-desktop applications. Keep it to two or three sentences.
+**Stack:** Java · JavaFX
 
-## Project Three
+On-device AI assistant for macOS, Windows, and Linux. Ara is a desktop chat
+application that runs large language models entirely on your machine — no
+cloud inference, no API keys. Built with JavaFX and java-llama.cpp, it
+includes a sidebar-first UI, agent tool calling, encrypted local storage,
+and optional in-app updates.
 
-**Stack:** Java · In progress
+Source: [github.com/OliverRawden/Ara](https://github.com/OliverRawden/Ara)
 
-Work currently underway. Note goals, key technologies, and expected status
-when complete.
+## Platformer
+
+**Stack:** Java · Swing · In progress
+
+A 2D platformer written in Java with Swing, built from scratch with zero AI.
+Work in progress: game loop, keyboard and mouse input, and a placeholder
+renderer are in place. Next steps are the tile map, camera, and player
+character.
