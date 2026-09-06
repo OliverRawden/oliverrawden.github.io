@@ -6,69 +6,77 @@ layout: default
 
 <div class="portfolio-home px-xl-1">
   <header class="portfolio-hero mb-4">
-    <p class="portfolio-eyebrow text-muted mb-2">Java Developer</p>
+    <p class="portfolio-eyebrow text-muted mb-2">Java developer</p>
     <h1 class="portfolio-title">{{ site.title }}</h1>
     <p class="portfolio-lede lead text-muted">
-      {{ site.description }}
+      I build desktop software in Java — local-first tools, careful
+      architecture, and systems that stay on your machine.
     </p>
   </header>
 
   <section class="portfolio-section mb-5">
     <h2 class="portfolio-heading h5 text-uppercase tracking-wide mb-3">Selected work</h2>
     <p class="text-muted mb-3">
-      A short overview of projects. Full details live on the
-      <a href="{{ '/projects/' | relative_url }}">Projects</a> page.
+      A short overview. Full write-ups live on
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>.
     </p>
 
     <div class="portfolio-cards">
-      <article class="portfolio-card card mb-3">
-        <div class="card-body">
-          <h3 class="h5 card-title mb-2">This website</h3>
-          <p class="card-text text-muted mb-2">
-            Personal Java developer portfolio, built with Jekyll and Chirpy
-            and hosted on GitHub Pages.
-          </p>
-          <span class="portfolio-tag">Jekyll</span>
-          <span class="portfolio-tag">GitHub Pages</span>
-        </div>
-      </article>
+      <a class="portfolio-card-link" href="{{ '/projects/' | relative_url }}#ara">
+        <article class="portfolio-card card mb-3">
+          <div class="card-body">
+            <h3 class="h5 card-title mb-2">Ara</h3>
+            <p class="card-text text-muted mb-2">
+              On-device AI assistant for macOS, Windows, and Linux.
+              Chat, models, and memory stay on the machine — no cloud
+              inference, no API keys.
+            </p>
+            <span class="portfolio-tag">Java</span>
+            <span class="portfolio-tag">JavaFX</span>
+          </div>
+        </article>
+      </a>
 
-      <article class="portfolio-card card mb-3">
-        <div class="card-body">
-          <h3 class="h5 card-title mb-2">Ara</h3>
-          <p class="card-text text-muted mb-2">
-            On-device AI assistant for macOS, Windows, and Linux. Desktop
-            chat that runs large language models locally — no cloud
-            inference, no API keys. Written in Java and JavaFX.
-          </p>
-          <span class="portfolio-tag">Java</span>
-          <span class="portfolio-tag">JavaFX</span>
-        </div>
-      </article>
+      <a class="portfolio-card-link" href="{{ '/projects/' | relative_url }}#platformer">
+        <article class="portfolio-card card mb-3">
+          <div class="card-body">
+            <h3 class="h5 card-title mb-2">Platformer</h3>
+            <p class="card-text text-muted mb-2">
+              A 2D platformer in Java and Swing, written from scratch
+              by hand. Game loop and input are in; the world comes next.
+            </p>
+            <span class="portfolio-tag">Java</span>
+            <span class="portfolio-tag">Swing</span>
+            <span class="portfolio-tag">In progress</span>
+          </div>
+        </article>
+      </a>
 
-      <article class="portfolio-card card mb-3">
-        <div class="card-body">
-          <h3 class="h5 card-title mb-2">Platformer</h3>
-          <p class="card-text text-muted mb-2">
-            Work-in-progress 2D platformer written in Java with Swing.
-            Built from scratch with zero AI.
-          </p>
-          <span class="portfolio-tag">Java</span>
-          <span class="portfolio-tag">Swing</span>
-          <span class="portfolio-tag">In progress</span>
-        </div>
-      </article>
+      <a class="portfolio-card-link" href="{{ '/projects/' | relative_url }}#this-site">
+        <article class="portfolio-card card mb-3">
+          <div class="card-body">
+            <h3 class="h5 card-title mb-2">This site</h3>
+            <p class="card-text text-muted mb-2">
+              A small, formal portfolio for selected work. Jekyll and
+              Chirpy, hosted on GitHub Pages.
+            </p>
+            <span class="portfolio-tag">Jekyll</span>
+            <span class="portfolio-tag">GitHub Pages</span>
+          </div>
+        </article>
+      </a>
     </div>
 
     <p class="mt-3 mb-0">
-      <a class="portfolio-link" href="{{ '/projects/' | relative_url }}">View all projects →</a>
+      <a class="portfolio-link" href="{{ '/projects/' | relative_url }}">All projects →</a>
     </p>
   </section>
 
   <section class="portfolio-section mb-4">
     <h2 class="portfolio-heading h5 text-uppercase tracking-wide mb-3">About</h2>
-    <p class="text-muted">
-      Java developer focused on robust, maintainable systems. Read more on the
+    <p class="text-muted mb-0">
+      I write Java for the desktop: private by default, structured with
+      care. More on the
       <a href="{{ '/about/' | relative_url }}">About</a> page, or email
       <a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a>.
     </p>

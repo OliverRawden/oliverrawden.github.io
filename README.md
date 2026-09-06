@@ -1,6 +1,6 @@
 # oliverrawden.github.io
 
-Personal site for **Oliver Rawden** — a formal Java developer portfolio.
+Personal site for **Oliver Rawden** — a formal Java / desktop-software portfolio.
 
 Built with [Jekyll](https://jekyllrb.com) and
 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy), hosted on GitHub Pages.

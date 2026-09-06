@@ -2,24 +2,34 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+toc: false
+description: >-
+  Java developer building local-first desktop software.
 ---
 
-## Oliver Rawden
+I write Java, mostly for the desktop.
 
-Java developer focused on robust, maintainable systems. This site is a concise
-portfolio of selected work and notes.
+The work I care about is local-first: tools that run on your machine, keep
+their data there, and stay readable six months later. I would rather ship a
+small system with a clear architecture than a large one held together by hope.
+
+This site is a concise record of selected projects — not a blog, not a feed.
 
 ### Focus
 
-- Application and service development in Java
-- Clean architecture and practical engineering standards
-- Tools and systems that solve real operational problems
+- Desktop applications in Java, especially JavaFX
+- Local-first design: on-device inference, encrypted storage, no required cloud
+- Practical engineering — clear modules, boring reliability, interfaces that
+  stay out of the way
 
-### Background
+### Now
 
-Placeholder for a short professional background: experience, education, or
-areas of interest. Expand this section when ready.
+Most of my time goes into **[Ara](/projects/#ara)**, an on-device AI assistant,
+and a **[2D platformer](/projects/#platformer)** I am writing in Swing from
+first principles.
 
 ### Contact
 
 Email: [contact-rawden@pm.me](mailto:contact-rawden@pm.me)
+<br>
+GitHub: [OliverRawden](https://github.com/OliverRawden)
