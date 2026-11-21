@@ -1,6 +1,6 @@
 # oliverrawden.github.io
 
-Personal site for **Oliver Rawden** — a formal Java / desktop-software portfolio.
+Portfolio for **Oliver Rawden**: software tools, product design and AI automation for small businesses.
 
 Built with [Jekyll](https://jekyllrb.com) and
 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy), hosted on GitHub Pages.
@@ -31,12 +31,24 @@ bash tools/run.sh
 
 | Path | Purpose |
 |------|---------|
-| `_posts/` | Blog / update posts (shown on home) |
-| `_tabs/about.md` | About page (sidebar) |
-| `_tabs/projects.md` | Projects page (sidebar) |
+| `_layouts/home.html` | Home page layout: offers, projects, Rawden, contact |
+| `_data/portfolio.yml` | Home page content: offers and project cards |
+| `_tabs/` | Sidebar tabs: Projects, Skills, Timeline, About |
+| `projects/*.md` | One case-study page per project |
+| `assets/css/jekyll-theme-chirpy.scss` | Theme overrides and portfolio styles |
 | `_config.yml` | Site title, URL, social links |
+
+- **Gaps:** anything still to fill in is marked `<span class="tbc">TBC</span>`. Search for `tbc` to find them.
+- **Images:** put them in `assets/img/projects/<slug>/` and replace a `<div class="proof-slot">…</div>` placeholder with `![Description](/assets/img/projects/<slug>/<file>)`.
+- **New project:** add `projects/<slug>.md`, then list it in `_data/portfolio.yml`, `_tabs/projects.md`, `_tabs/skills.md` and `_tabs/timeline.md`.
+
+## Rules
+
+- No API keys, passwords, private client data or personal details in the repo or screenshots.
+- Client work is shown only with the client's permission, using dummy data in screenshots.
+- No invented testimonials, numbers or results.
 
 ## Deploy
 
-Pushes to `main` build and deploy via `.github/workflows/pages-deploy.yml`.
+Every push builds and link-tests the site via `.github/workflows/pages-deploy.yml`; only `main` is published.
 Ensure **Settings → Pages → Source** is set to **GitHub Actions**.

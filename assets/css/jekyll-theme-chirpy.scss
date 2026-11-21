@@ -350,3 +350,16 @@ article dl dd {
   margin-left: 0;
   color: var(--text-muted-color, #6c757d);
 }
+
+/* Explicit spacing, so the layout doesn't rely on utility classes alone */
+.portfolio-hero {
+  margin-bottom: 2.75rem;
+}
+
+.portfolio-section {
+  margin-bottom: 2.75rem;
+}
+
+.portfolio-hero .portfolio-link + .portfolio-link {
+  margin-left: 1.5rem;
+}
