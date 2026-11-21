@@ -1,42 +1,27 @@
 # oliverrawden.github.io
 
-Personal site for **Oliver Rawden** — a formal Java / desktop-software portfolio.
+Oliver Rawden's portfolio: software tools, product design and AI automation for small businesses.
 
-Built with [Jekyll](https://jekyllrb.com) and
-[Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy), hosted on GitHub Pages.
+Plain HTML and CSS, with no build step and no theme. Pushing to `main` publishes the site through `.github/workflows/pages-deploy.yml`.
 
-## Local development
+## Layout
 
-macOS system Ruby is too old. Use Homebrew Ruby (3.4+ recommended):
+| Path | What it is |
+| ---- | ---------- |
+| `index.html` | Home: hero, Work with me, flagship and smaller projects, skills with proof, timeline, Rawden, about, contact |
+| `projects/*.html` | One case-study page per project |
+| `assets/css/site.css` | All styles |
+| `assets/img/` | Logo, favicon and project images |
+| `404.html` | Not-found page (root-relative links) |
 
-```bash
-brew install ruby@3.4
-export PATH="/opt/homebrew/opt/ruby@3.4/bin:$PATH"
+## Editing
 
-bundle install
-bundle exec jekyll serve
-```
+- **Gaps:** anything still to fill in is marked `<span class="tbc">TBC</span>`, shown in amber. Search for `tbc` to find them all.
+- **Images:** put them in `assets/img/projects/<project-slug>/`, then replace a `<div class="thumb">…</div>` placeholder with `<img src="../assets/img/projects/<slug>/<file>" alt="…">`. Keep them under about 300 KB each.
+- **New project:** copy an existing page in `projects/`, change the content, then add it to the project cards or rows, the skills table and the timeline in `index.html`. Update the previous/next links at the bottom of the neighbouring pages.
 
-Chirpy requires Ruby **3.1–3.4** (not system Ruby 2.6, and not Ruby 4.x).
+## Rules
 
-Open [http://127.0.0.1:4000](http://127.0.0.1:4000).
-
-Or use the helper script:
-
-```bash
-bash tools/run.sh
-```
-
-## Content
-
-| Path | Purpose |
-|------|---------|
-| `_posts/` | Blog / update posts (shown on home) |
-| `_tabs/about.md` | About page (sidebar) |
-| `_tabs/projects.md` | Projects page (sidebar) |
-| `_config.yml` | Site title, URL, social links |
-
-## Deploy
-
-Pushes to `main` build and deploy via `.github/workflows/pages-deploy.yml`.
-Ensure **Settings → Pages → Source** is set to **GitHub Actions**.
+- No API keys, passwords, private client data or personal details in the repo or in screenshots.
+- Client work is shown only with the client's permission. Use dummy data in screenshots.
+- No invented testimonials, numbers or results.
