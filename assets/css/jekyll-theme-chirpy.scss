@@ -1,0 +1,352 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* ============================================================
+   Portfolio overrides — cleaner personal site, less blog-like
+   ============================================================ */
+
+/* Hide empty right-hand blog panel (recent posts / tags) */
+#panel-wrapper {
+  display: none !important;
+}
+
+/* Main content uses full width without the side panel */
+#main-wrapper main {
+  max-width: 48rem;
+}
+
+#main-wrapper .row > main.col-xl-9 {
+  flex: 0 0 100%;
+  max-width: 48rem;
+}
+
+#main-wrapper #tail-wrapper {
+  max-width: 48rem;
+}
+
+/* Soften page density */
+#main-wrapper .container {
+  padding-top: 0.5rem;
+}
+
+/* ---- Home / portfolio ---- */
+
+.portfolio-home {
+  padding-bottom: 2rem;
+}
+
+.portfolio-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portfolio-title {
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.portfolio-lede {
+  font-size: 1.1rem;
+  max-width: 36rem;
+  line-height: 1.65;
+}
+
+.portfolio-heading {
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.portfolio-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolio-card-link:hover,
+.portfolio-card-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolio-card {
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.portfolio-card-link:hover .portfolio-card,
+.portfolio-card-link:focus .portfolio-card {
+  border-color: var(--heading-color, rgba(128, 128, 128, 0.55));
+}
+
+.portfolio-card .card-title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.15rem 0.5rem;
+  margin-right: 0.35rem;
+  margin-bottom: 0.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--bs-border-color, rgba(128, 128, 128, 0.35));
+  color: var(--text-muted-color, #6c757d);
+}
+
+.portfolio-link {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.portfolio-link:hover {
+  text-decoration: underline;
+}
+
+/* ---- Hide blog chrome on posts & cards ---- */
+
+/* Dates, categories, written by, pin prompts */
+#post-list .post-meta,
+article .post-meta,
+.post-meta.text-muted {
+  display: none !important;
+}
+
+/* Related posts / prev-next feel very blog-like */
+#related-posts,
+.post-navigation,
+.content .post-tail-bottom {
+  display: none !important;
+}
+
+/* Page titles on About / Projects */
+#page-wrapper h1,
+article h1[data-toc-skip] {
+  letter-spacing: -0.02em;
+}
+
+/* Sidebar: slightly tighter */
+#sidebar .site-title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+#sidebar .site-subtitle {
+  font-size: 0.9rem;
+}
+
+/* Footer: quieter */
+#tail-wrapper footer {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Prefer calm card borders over heavy blog cards */
+.card {
+  box-shadow: none;
+}
+
+/* ---- Project fold (Ara) ---- */
+
+.project-fold {
+  margin: 1.25rem 0 2rem;
+  border: 1px solid var(--bs-border-color, rgba(128, 128, 128, 0.35));
+  border-radius: 0.5rem;
+  background: transparent;
+}
+
+.project-fold-summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.project-fold-summary::-webkit-details-marker,
+.project-fold-summary::marker {
+  display: none;
+  content: "";
+}
+
+.project-fold-summary::before {
+  content: "▸";
+  display: inline-block;
+  width: 1rem;
+  color: var(--text-muted-color, #6c757d);
+  transition: transform 0.15s ease;
+}
+
+.project-fold[open] > .project-fold-summary::before {
+  transform: rotate(90deg);
+}
+
+.project-fold-hint {
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.project-fold-body {
+  padding: 0 1rem 1.15rem;
+  border-top: 1px solid var(--bs-border-color, rgba(128, 128, 128, 0.35));
+}
+
+.project-fold-body > .h6 {
+  margin-top: 1.25rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.project-shots {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-shots figure {
+  margin: 0;
+}
+
+.project-shots img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+  border: 1px solid var(--bs-border-color, rgba(128, 128, 128, 0.35));
+}
+
+.project-shots figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted-color, #6c757d);
+}
+
+.project-code-caption {
+  margin-top: -0.5rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted-color, #6c757d);
+}
+
+.project-fold-body .highlight {
+  margin-bottom: 0.35rem;
+}
+
+@media (min-width: 768px) {
+  .project-shots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---- Portfolio additions (client-first rebuild) ---- */
+
+.portfolio-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.portfolio-grid .card {
+  height: 100%;
+}
+
+.portfolio-proof {
+  font-size: 0.85rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--bs-border-color, rgba(128, 128, 128, 0.35));
+}
+
+/* Gaps still to fill in: easy to spot, easy to search for */
+.tbc {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.05rem 0.45rem;
+  border-radius: 0.25rem;
+  border: 1px dashed #c98a1b;
+  color: #c98a1b;
+  vertical-align: middle;
+}
+
+/* Image placeholders on project pages */
+.proof-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.proof-slot {
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  border: 1px dashed var(--bs-border-color, rgba(128, 128, 128, 0.45));
+  color: var(--text-muted-color, #6c757d);
+}
+
+/* Rawden card: logo on its own dark brand tile, in light and dark mode */
+.rawden-card .card-body {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.rawden-tile {
+  flex: 0 0 auto;
+  background: #0a0a0b;
+  border-radius: 0.4rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.rawden-tile img {
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .rawden-card .card-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Project list on the Projects tab */
+article dl dt {
+  margin-top: 1rem;
+}
+
+article dl dd {
+  margin-left: 0;
+  color: var(--text-muted-color, #6c757d);
+}

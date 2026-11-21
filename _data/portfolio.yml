@@ -1,0 +1,50 @@
+# Content for the home page. Project pages live in projects/.
+
+offers:
+  - title: Custom software tools
+    text: Desktop apps, command-line tools and automations that remove a repetitive, error-prone job.
+    proof: '<a href="/projects/pdf-rebranding-tools/">PDF Rebranding Tools</a>, a paid client job'
+  - title: Product design and prototyping
+    text: From a brief and rough sketches to Fusion 360 CAD, mock-ups and 3D-printed prototypes.
+    proof: '<a href="/projects/two-player-game/">Two Player Game</a>, <a href="/projects/bottle-opener/">Bottle Opener</a>'
+  - title: AI agents and email automation
+    text: AI set-ups that draft, sort and file routine work, with a person approving anything that matters.
+    proof: '<a href="https://rawden.tech/">Email Autopilot</a>, <a href="/projects/agents-and-automation/">Agents and automation</a>'
+
+groups:
+  - title: Flagship projects
+    items:
+      - title: PDF Rebranding Tools
+        url: /projects/pdf-rebranding-tools/
+        text: A Mac app and a command-line tool that put a client's logo, details and footers onto supplier PDFs. A paid job, built with AI coding agents.
+        tags: [Swift, SwiftUI, Client work]
+      - title: Two Player Game
+        url: /projects/two-player-game/
+        text: A physical game designed to a brief, from sketches through Fusion 360 CAD and mock-ups, with a 30-slide presentation.
+        tags: [Product design, Fusion 360, Prototyping]
+      - title: Bottle Opener
+        url: /projects/bottle-opener/
+        text: A product designed from sketches through mock-ups to Fusion 360 CAD.
+        tags: [Product design, Fusion 360, Nearly finished]
+  - title: Smaller projects
+    items:
+      - title: Cassette USB Stick
+        url: /projects/cassette-usb-stick/
+        text: A 3D-printed USB stick shaped like a cassette tape, with a swing-out mechanism.
+        tags: [Fusion 360, 3D printing]
+      - title: Pixel Platformer
+        url: /projects/pixel-platformer/
+        text: A 2D platformer in pure Java and Java2D. No engine, three levels, a runnable JAR.
+        tags: [Java, Gradle]
+      - title: Agents and automation
+        url: /projects/agents-and-automation/
+        text: A multi-agent set-up on a shared notes vault and task list, plus a YouTube Shorts pipeline.
+        tags: [AI agents]
+      - title: Portable computer
+        text: A portable computer project.
+        tags: [Hardware]
+        tbc: true
+      - title: Big Bang engineering competition
+        text: Work for the Big Bang engineering competition.
+        tags: [Competition]
+        tbc: true

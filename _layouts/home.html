@@ -1,0 +1,85 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<div class="portfolio-home px-xl-1">
+  <header class="portfolio-hero mb-5">
+    <p class="portfolio-eyebrow text-muted mb-2">Software tools · Product design · AI automation</p>
+    <h1 class="portfolio-title">I build practical software tools and design physical products for small businesses.</h1>
+    <p class="portfolio-lede lead text-muted">
+      Mac apps, command-line tools and automations that take a repetitive job
+      off your hands. Product design from a brief to Fusion 360 CAD and
+      3D-printed prototypes. Based in the UK.
+    </p>
+    <p class="mb-0">
+      <a class="portfolio-link me-4" href="mailto:{{ site.social.email }}?subject=New%20project">Start a project →</a>
+      <a class="portfolio-link" href="{{ '/projects/' | relative_url }}">See the work →</a>
+    </p>
+  </header>
+
+  <section class="portfolio-section mb-5">
+    <h2 class="portfolio-heading h5 text-uppercase tracking-wide mb-3">Work with me</h2>
+    <div class="portfolio-grid">
+      {% for offer in site.data.portfolio.offers %}
+        <article class="portfolio-card card">
+          <div class="card-body">
+            <h3 class="h6 card-title mb-2">{{ offer.title }}</h3>
+            <p class="card-text text-muted mb-2">{{ offer.text }}</p>
+            <p class="portfolio-proof mb-0">Proof: {{ offer.proof }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% for group in site.data.portfolio.groups %}
+    <section class="portfolio-section mb-5">
+      <h2 class="portfolio-heading h5 text-uppercase tracking-wide mb-3">{{ group.title }}</h2>
+      <div class="portfolio-cards">
+        {% for item in group.items %}
+          {% if item.url %}<a class="portfolio-card-link" href="{{ item.url | relative_url }}">{% endif %}
+          <article class="portfolio-card card mb-3">
+            <div class="card-body">
+              <h3 class="h5 card-title mb-2">{{ item.title }}</h3>
+              <p class="card-text text-muted mb-2">{{ item.text }}</p>
+              {% for tag in item.tags %}<span class="portfolio-tag">{{ tag }}</span>{% endfor %}
+              {% if item.tbc %}<span class="tbc">Write-up coming</span>{% endif %}
+            </div>
+          </article>
+          {% if item.url %}</a>{% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+
+  <section class="portfolio-section mb-5">
+    <h2 class="portfolio-heading h5 text-uppercase tracking-wide mb-3">Also building</h2>
+    <a class="portfolio-card-link" href="https://rawden.tech/">
+      <article class="portfolio-card card rawden-card">
+        <div class="card-body">
+          <div class="rawden-tile"><img src="{{ '/assets/img/rawden-logo.svg' | relative_url }}" alt="Rawden" width="150" height="28"></div>
+          <div>
+            <h3 class="h5 card-title mb-2">Email Autopilot by Rawden</h3>
+            <p class="card-text text-muted mb-0">
+              AI drafts replies to customer emails for UK online sellers, using
+              the shop's own information. You approve every reply before it
+              goes out. More at rawden.tech.
+            </p>
+          </div>
+        </div>
+      </article>
+    </a>
+  </section>
+
+  <section class="portfolio-section mb-4">
+    <h2 class="portfolio-heading h5 text-uppercase tracking-wide mb-3">Contact</h2>
+    <p class="text-muted mb-0">
+      Tell me what the problem is. I'll tell you honestly whether I can solve
+      it, how long it will take and what it will cost. Email
+      <a href="mailto:{{ site.social.email }}?subject=New%20project">{{ site.social.email }}</a>,
+      or read more <a href="{{ '/about/' | relative_url }}">about me</a>.
+    </p>
+  </section>
+</div>
